@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameInput;
-using QuickResearch.Config;
+using QuickResearchPlusPlus.Config;
 using static Terraria.ID.ContentSamples;
 using static Terraria.Audio.SoundEngine;
 using static Terraria.GameContent.Creative.CreativeItemSacrificesCatalog;
@@ -25,7 +25,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.Config;
 using Terraria.UI;
 
-namespace QuickResearch
+namespace QuickResearchPlusPlus
 {
     public class QRPlayer : ModPlayer
     {

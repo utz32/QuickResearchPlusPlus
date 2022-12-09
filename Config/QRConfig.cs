@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using Terraria.ModLoader.Config;
 
-namespace QuickResearch.Config
+namespace QuickResearchPlusPlus.Config
 {
 	public class QRConfig : ModConfig
 	{
@@ -18,7 +18,7 @@ namespace QuickResearch.Config
 		[Header("UI")]
 		[Label("Show UI Button")]
 		[Tooltip("Show UI Button")]
-		[DefaultValue(false)]
+		[DefaultValue(true)]
 
 		public bool ShowButton;
 		

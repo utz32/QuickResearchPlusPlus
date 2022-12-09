@@ -3,10 +3,10 @@ using Terraria.ModLoader;
 using Terraria.UI;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
-using QuickResearch.Config;
+using QuickResearchPlusPlus.Config;
 
 
-namespace QuickResearch.UI
+namespace QuickResearchPlusPlus.UI
 {
     public class QuickResearchButton : ModSystem
     {
@@ -52,9 +52,12 @@ namespace QuickResearch.UI
                 layers.Insert(mouseTextIndex, new LegacyGameInterfaceLayer("MyMod: MyInterface", drawMethod, InterfaceScaleType.UI));
             }
             
-            if (ModContent.GetInstance<QRConfig>().ShowButton && Main.GameMode.Equals(3) && Main.CreativeMenu.Blocked == false && Main.playerInventory == true)
+            if (ModContent.GetInstance<QRConfig>().ShowButton && 
+				Main.GameMode.Equals(3) && 
+				Main.CreativeMenu.Blocked == false && 
+				Main.playerInventory == true)
             {
-                ShowMyUI();
+				ShowMyUI();
             }
             else
             {

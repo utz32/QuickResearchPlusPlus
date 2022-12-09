@@ -5,7 +5,7 @@ using Terraria.UI;
 using Terraria.GameContent.UI.Elements;
 using ReLogic.Content;
 
-namespace QuickResearch.UI
+namespace QuickResearchPlusPlus.UI
 {
     internal class UIHoverImageButton : UIImageButton
     {
@@ -17,10 +17,10 @@ namespace QuickResearch.UI
 
         protected override void DrawSelf(SpriteBatch spriteBatch)
         {
-            var texture = ModContent.Request<Texture2D>("QuickResearch/UI/QuickResearchButton");
-            var textureMO = ModContent.Request<Texture2D>("QuickResearch/UI/QuickResearchButtonMouseOver");
-            var textureD = ModContent.Request<Texture2D>("QuickResearch/UI/QuickResearchButtonPress");
-            var textureMOD = ModContent.Request<Texture2D>("QuickResearch/UI/QuickResearchButtonPressMouseOver");
+            var texture = ModContent.Request<Texture2D>("QuickResearchPlusPlus/UI/QuickResearchButton");
+            var textureMO = ModContent.Request<Texture2D>("QuickResearchPlusPlus/UI/QuickResearchButtonMouseOver");
+            var textureD = ModContent.Request<Texture2D>("QuickResearchPlusPlus/UI/QuickResearchButtonPress");
+            var textureMOD = ModContent.Request<Texture2D>("QuickResearchPlusPlus/UI/QuickResearchButtonPressMouseOver");
 
             base.DrawSelf(spriteBatch);
 

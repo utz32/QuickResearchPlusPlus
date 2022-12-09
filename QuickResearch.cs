@@ -1,7 +1,7 @@
-using QuickResearch.UI;
+using QuickResearchPlusPlus.UI;
 using Terraria.ModLoader;
 
-namespace QuickResearch
+namespace QuickResearchPlusPlus
 {
 	public class QuickResearch : Mod
 	{

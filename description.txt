@@ -15,3 +15,5 @@ This mod should also works with items that can be researched from other mods.
 
 If you encounter any bugs, report them in the Steam page of this mod.
 Many thanks to the Discord community of tModLoader for their help in mod creation.
+
+https://github.com/utz32/QuickResearchPlusPlus
