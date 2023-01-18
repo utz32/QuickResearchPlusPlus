@@ -60,7 +60,7 @@ namespace QuickResearchPlusPlus
 				bool isFullyResearched = false;
 				int CurrentSacrificeCount = CreativeUI.GetSacrificeCount(inventory[i].type, out isFullyResearched);
 				int MaxSacrificeCount = CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[inventory[i].type];
-				if ( ! isFullyResearched && (completeResearchToggle && inventory[i].stack >= MaxSacrificeCount - CurrentSacrificeCount) || (!completeResearchToggle))
+				if ( ! isFullyResearched && ((completeResearchToggle && inventory[i].stack >= MaxSacrificeCount - CurrentSacrificeCount) || (!completeResearchToggle)))
 				{
 					//~ Main.NewText(inventory[i]);
 					
