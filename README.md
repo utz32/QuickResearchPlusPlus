@@ -7,6 +7,8 @@ Fixed SFX and OnResearch() Triggers. Added UI Options.
 
 Changelog:
 
+1.9.2 added "Display researched items in Chat" and "Clear Inventory" options
+
 1.9.1 fixed "only complete research option" 
 
 

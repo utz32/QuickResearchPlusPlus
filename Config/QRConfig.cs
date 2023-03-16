@@ -14,6 +14,12 @@ namespace QuickResearchPlusPlus.Config
 		
 		public bool CompleteResearchToggle;
 		
+		//~ trashes the already researched items
+		[Label("Clear Inventory")]
+		[Tooltip("trash everything that isn't favorited, after Research check, including coins and ammo")]
+		[DefaultValue(false)]
+		
+		public bool ClearInventoryToggle;		
 		
 		[Header("UI")]
 		[Label("Show UI Button")]
@@ -37,5 +43,15 @@ namespace QuickResearchPlusPlus.Config
 		[Range(int.MinValue, int.MaxValue)]
 
 		public int ButtonY;
+		
+				//~ show what items are researched
+		[Header("Debug")]
+		[Label("Display researched items in Chat")]
+		[Tooltip("Display researched items in Chat")]
+		[DefaultValue(false)]
+
+		public bool DisplayResearchedItemsInChat;		
+
+		
 	}
 }

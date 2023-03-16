@@ -46,7 +46,13 @@ namespace QuickResearchPlusPlus
 		{
 			bool flag = false;
 			bool flag2 = false;
+			
 			bool completeResearchToggle = ModContent.GetInstance<QRConfig>().CompleteResearchToggle;
+			bool ClearInventoryToggle = ModContent.GetInstance<QRConfig>().ClearInventoryToggle;
+			bool DisplayResearchedItemsInChat = ModContent.GetInstance<QRConfig>().DisplayResearchedItemsInChat;
+			
+			string ResearchedItemsString = "";
+			
 			Item[] inventory = Main.LocalPlayer.inventory;
 			int num = default(int);
 			
@@ -62,13 +68,14 @@ namespace QuickResearchPlusPlus
 				int MaxSacrificeCount = CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[inventory[i].type];
 				if ( ! isFullyResearched && ((completeResearchToggle && inventory[i].stack >= MaxSacrificeCount - CurrentSacrificeCount) || (!completeResearchToggle)))
 				{
-					//~ Main.NewText(inventory[i]);
 					
-					flag2 = true;
-
 					int SubtractingAmount = inventory[i].stack;
 					int ItemID = inventory[i].type;
 					
+					ResearchedItemsString += "[i:" + ItemID + "]";
+					
+					flag2 = true;
+
 					
 					int amountWeSacrificed;
 					CreativeUI.SacrificeItem(inventory[i], out amountWeSacrificed);
@@ -81,8 +88,17 @@ namespace QuickResearchPlusPlus
 										
 					inventory[i].TurnToAir();					
 
+				}
+				
+				//should work for everything except not reasearchable Items
+				if (ClearInventoryToggle)
+				{
+					inventory[i].TurnToAir();										
 				}				
 			}
+
+			if (DisplayResearchedItemsInChat && (flag || flag2))
+				Main.NewText(ResearchedItemsString);
 
 			if (flag)
 			{
